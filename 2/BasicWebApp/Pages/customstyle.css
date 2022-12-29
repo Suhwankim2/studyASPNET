@@ -28,22 +28,23 @@ h2 {
     
 }
 
-#황{
-    width : 1000px;
+#황 {
+    width: 1000px;
     height: 120px;
     background-color: coral;
+    
 }
 
-#주{
+#주 {
     width: 1000px;
     background-color: aqua;
+    overflow: hidden;
 }
 
 #녕 {
     width: 1000px;
     height: 100px;
     background-color: darkolivegreen;
-    float: left;
    
 }
 /*li{
@@ -83,5 +84,5 @@ h2 :hover{
 }
 #wrap {
     overflow : hidden;
-    max-width: 1000px;
+    min-width: 1000px;
 }
