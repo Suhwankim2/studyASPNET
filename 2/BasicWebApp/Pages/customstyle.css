@@ -1,0 +1,87 @@
+﻿*{
+   margin : 0 auto; padding : 0;
+
+}
+
+
+body {
+
+}
+
+h1{
+    color: white;
+    background-color: rgb(66, 66, 66); 
+
+}
+
+h2 {
+    color : blue;
+    font-weight: bolder;
+    font-style: italic;
+
+}
+
+
+#selector {
+    color : red;
+    text-align : center;
+    
+}
+
+#황{
+    width : 1000px;
+    height: 120px;
+    background-color: coral;
+}
+
+#주{
+    width: 1000px;
+    background-color: aqua;
+}
+
+#녕 {
+    width: 1000px;
+    height: 100px;
+    background-color: darkolivegreen;
+    float: left;
+   
+}
+/*li{
+    color : white;
+}*/
+
+.it{
+    color : white;
+}
+
+.item{
+    color: indianred;
+}
+
+.sp{
+    background-color : black;
+}
+h2:active{
+
+    color: white;
+
+}
+h2 :hover{
+    color : blueviolet;
+    background-color : chocolate;
+}
+#NM_INT_LEFT {
+    float : left;
+    width : 700px;
+    background-color : orangered;
+}
+
+#NM_INT_RIGHT {
+    float: right;
+    width: 300px;
+    background-color: darkslateblue;
+}
+#wrap {
+    overflow : hidden;
+    max-width: 1000px;
+}

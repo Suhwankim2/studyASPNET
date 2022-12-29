@@ -7,8 +7,76 @@
 </head>
 <body>
     <h2>기본태그</h2>
-    <p>안녕하세요,<b>HTML</b>  <i><ins>학습</ins></i>시간입니다.</p>
+    <p><small>안녕하세요</small><b>HTML</b> <i><ins>학습</ins></i>시간입니다.</p>
     <p>e = mc<sup>2</sup></p>
     <p>여기는 <del>생략입니다</del></p>
+    <hr/>
+    <h2>목록태그</h2>
+    <ol>
+        <li><a href="http://www.google.com" target="_blank">구글</a></li>
+        <!--타겟은 주소 구글 새창으로 구글이 뜬다-->
+        <li><a href="http://www.naver.com"target="_blank">네이버</a></li>
+        <li><a href="http://www.kakao.com"target="_blank">카카오</a></li>
+
+    </ol>
+
+    <ul>
+        <li>스타크래프트</li>
+        <li>워크래프트</li>
+        <li>디아블로</li>
+        <li>카트라이더</li>
+
+    </ul>
+
+    <ol>
+        <li>
+            웹기반 기술
+            <ul>
+
+                <li> HTML 기본태그</li>
+                <li> CSS 전반학습</li>
+                <li> javascript 문법</li>
+
+            </ul>
+
+        </li>
+        <li>ASP.NET Core 소개</li>
+    </ol>
+    <hr/>
+
+    <h2>테이블</h2>
+    <table border="1">
+        <tr>
+            <th></th>
+            <th>월</th>
+            <th>화</th>
+            <th>수</th>
+            <th>목</th>
+            <th>금</th>
+
+        </tr>
+        <tr>
+            <td rowspan="2">1교시</td>
+            <th>국어</th>
+            <th>수학</th>
+            <th>미술</th>
+            <th>영어</th>
+            <th>기술</th>
+            <th>제육</th>
+
+        </tr>
+        <tr>
+            <td>2교시</td>
+            <td>도덕</td>
+            <td>체육</td>
+            <td>공업</td>
+            <td colspan="2">음악</td>
+        </tr>
+
+    </table>
+    <hr/>
+    <h2>이미지</h2>
+    <img src="./tap.png" alt="고양이" title="회색 아기고양이"
+         width="300" height="300"/>
 </body>
 </html>
