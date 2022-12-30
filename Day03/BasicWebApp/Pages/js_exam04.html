@@ -5,19 +5,25 @@
     <title>JS 4 DOM</title>
    <script>
        window.onload = function () {
+
+            var header2 = document.getElementById('header2');
+
+
          header2.style.color ='orange';
          header2.style.backgroundcolor ='red';
          header2.innerHTML = '자바스크립트로 변경했어요!!!';;
 
 
 
-          var header2 = document.getElementById('h1');
+          var headers = document.querySelectorAll('h1');
 
            for (var i = 0; i < headers.length; i++) {
 
-               var header = header[i]; // h1객채를 하나만
+               var header = headers[i]; // h1객채를 하나만
 
-               header 
+
+               header.style.color = 'blue';
+
            }
 
        };
