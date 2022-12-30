@@ -16,6 +16,7 @@ ASP.NET Core 학습 리포지토리
  1. 웹 기반기술
   - 반응형 웹(Responsive Web)
   - Javascript 문법
-  
+  - DOM(Document Object Model)
+  - jquery
  ## 4일차
  - ASP.NET Core 시작
