@@ -24,7 +24,7 @@
         }
 
         html {
-            background: #f7f5f5;
+            background: #d8e6e6;
         }
     </style>
 
@@ -308,27 +308,34 @@
             });
 
                 
-            function showLightBox() {
+            function showLightBox(obj) {
 
-                $('dark-background').show();
-                $('body').css('top', $(window), scrollTop());
+                var img_src = obj.getElementsByTagName('img')[0].src;
+                $('#random-image').attr({
+                    src: img_src
+                });
+
+                $('#darken-background').show();
+                $('body').css('top', $(window).scrollTop());
                 $('body').css('overflow', 'hidden');
             }
 
 
             function hideLightBox() {
-                $('dark-background').hide();               
+                $('#darken-background').hide();               
                 $('body').css('overflow','');
             }
 
-            $('#main-background').click(function () { 
+            $('#darken-background').click(function () { 
                hideLightBox();
             });
 
-            $('paper').click(function () { showLightBox(); });
+            $('.paper').click(function () {
+                showLightBox(this); // 파라메터 받으면서 추가필요
+            });
 
                 // 클릭이벤트 하위 진짜 안닫히게하기
-            $('Lightbox').click(function (event) {
+            $('#lightbox').click(function (event) {
                 event.stopPropagation()
             });
         });   
@@ -508,7 +515,7 @@
         <div id="lightbox">
             <div class="user-information">
                 <a class="user-information-image" href="#">
-                    <img width="70" src="https://via.placeholder.com/70" />
+                    <img width="70" src="images/cat.png" />
                 </a>
                 <div class="user-information-text">
                     <h3>User</h3>
@@ -517,7 +524,7 @@
             </div>
             <hr class="lightbox-splitter" />
             <!--<img width="600" src="https://via.placeholder.com/600x750" />-->
-            <img width="600" src="https://placeimg.com/600/750/any"/>
+            <img id="random-image" src="https://placeimg.com/600/750/any" width="600"/>
         </div>
     </div>
     <!-- 라이트박스영역 종료 -->
