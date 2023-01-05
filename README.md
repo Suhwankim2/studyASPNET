@@ -26,6 +26,9 @@ ASP.NET Core 학습 리포지토리
    
  2. 결과화면
 ![메인화면](https://raw.githubusercontent.com/Suhwankim2/studyASPNET/main/images/stml_screen01.png)
+ 메인화면
+ ![라이프박스화면]()
+ 
  ## 5일차
  ASP.NET Core
   
