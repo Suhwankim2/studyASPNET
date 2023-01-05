@@ -22,7 +22,7 @@ ASP.NET Core 학습 리포지토리
  - ASP.NET Core 시작
  1. 웹 기반 총복습
    -핀터레스트 스타일 프론트엔드 연습
-   -[소스]()
+   -[소스](https://github.com/Suhwankim2/studyASPNET/tree/main/Day04.1%20jin/FrontEndexce/Pages)
    
  2. 결과화면
 ![메인화면](https://raw.githubusercontent.com/Suhwankim2/studyASPNET/main/images/stml_screen01.png)
