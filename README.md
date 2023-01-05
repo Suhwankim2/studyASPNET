@@ -25,7 +25,7 @@ ASP.NET Core 학습 리포지토리
    -소스
    
  2. 결과화면
-![메인화면] (https://github.com/Suhwankim2/studyASPNET/blob/main/images/stml_screen01.png?raw=true) 
+![메인화면] ([https://github.com/Suhwankim2/studyASPNET/blob/main/images/stml_screen01.png?raw=true](https://raw.githubusercontent.com/Suhwankim2/studyASPNET/main/images/stml_screen01.png)) 
  ## 5일차
  ASP.NET Core
   
