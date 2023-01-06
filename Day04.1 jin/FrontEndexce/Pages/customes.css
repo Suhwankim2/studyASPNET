@@ -42,7 +42,7 @@ html {
     height: 40px;
     left: 50%;
     margin-left: -100px;
-    background: url('../logo.png');
+    background: url('logo.png');
     background-repeat: no-repeat; /*사진 반복금지*/
     text-indent: -9999px;
 }
@@ -90,12 +90,13 @@ html {
     background: #faf7f7;
     border-top: 1px solid #cfcaca;
     box-shadow: 1px 3px 3px rgba(34, 25, 25, 0.4);
-    margin-left: 200px;
+
 }
 
     #main-navigation > ul {
         overflow: hidden; /* 내영역은 가로 끝까지 다 차지 */
         text-align: center;
+        margin-left: 190px;
     }
 
         #main-navigation > ul > li {
