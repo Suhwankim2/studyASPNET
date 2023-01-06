@@ -3,72 +3,67 @@
 <head>
     <meta charset="utf-8" />
     <title>Buinterest</title>
-    <!-- 외부 스타일 시트 추가 -->
-    <link rel="stylesheet" href="css/customes.css" />
+    <!-- 외부스타일시트 추가 -->
+    <link rel="stylesheet" href="customes.css" />
 
-
-
-    <!-- 외부 자바스크립트영역 -->
+    <!-- 자바스크립트 영역 -->
     <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-
-    <!-- 내부 자바스크립트 영역 -->
+    <!-- 내부자바스크립트 영역 -->
     <script>
+        // 페이지 로드 이벤트
+        $(document).ready(function () {
+            // 풀다운메뉴 이벤트 - outer-menu에 마우스가 올라가면
+            $('.outer-menu').hover(function () {
+                $(this).find('.inner-menu').css('display', 'block');
+            }, function () {
+                $(this).find('.inner-menu').css('display', 'none');
+            });
 
+            // 이미지로드 플러그인 동작
+            // 로드될때 중간 동그라미 표현, 이미지 클릭 시 팝업 카드형태
+            $('#main-section').imagesLoaded(function () {
+                $('#main-section').masonry({
+                    itemSelector: '.paper',
+                    columnWidth: 230,
+                    isAnimated: true
 
-    $(document).ready(function () {
+                });
+            });
 
-    $('.outer-menu').hover(function () {
-    $(this).find('.inner-menu').css('display', 'block');
-    }, function () {
-    $(this).find('.inner-menu').css('display', 'none');
-    });
+            // obj로 .paper-holder 내 이미지를 라이트박스로 보내어서
+            // 같은 이미지 출력
+            function showLightBox(obj) {
 
-    // 이미지 로드 플러그인 동작
-    // 로드될때 중간 동그라미 나오게, 이미지 클릭했을때 팝업 카드형태
+                var img_src = obj.getElementsByTagName('img')[0].src;
+                // 라이트박스 보이게 하기
+                $('#random-image').attr({
+                    src: img_src
+                });
+                $('#darken-background').show();
+                $('#darken-background').css('top', $(window).scrollTop());
+                // 스크롤 금지
+                $('body').css('overflow', 'hidden');
+            }
 
-    $('#main-section').imagesLoaded(function () {
-    $('#main-section').masonry({
-    itemSelector: '.paper',
-    columnWidth: 230,
-    isAnimated: true
-    });
-    });
+            function hideLightBox() {
+                // 라이트박스 숨기기
+                $('#darken-background').hide();
+                $('body').css('overflow', '');
+            }
 
+            // 라이트박스 숨기기 이벤트
+            $('#darken-background').click(function () { hideLightBox() });
 
-    function showLightBox(obj) {
+            // 라이트박스 보이기 이벤트
+            $('.paper').click(function () { showLightBox(this) });
 
-    var img_src = obj.getElementsByTagName('img')[0].src;
-    $('#random-image').attr({
-    src: img_src
-    });
-
-    $('#darken-background').show();
-    $('body').css('top', $(window).scrollTop());
-    $('body').css('overflow', 'hidden');
-    }
-
-
-    function hideLightBox() {
-    $('#darken-background').hide();
-    $('body').css('overflow', '');
-    }
-
-    $('#darken-background').click(function () {
-    hideLightBox();
-    });
-
-    $('.paper').click(function () {
-    showLightBox(this); // 파라메터 받으면서 추가필요
-    });
-
-    // 클릭이벤트 하위 진짜 안닫히게하기
-    $('#lightbox').click(function (event) {
-    event.stopPropagation()
-    });
-    });
-
+            // 라이트박스 하위 전파 방지
+            $('#lightbox').click(function (event) {
+                event.stopPropagation()
+            })
+        });
     </script>
 </head>
 <body>
@@ -138,13 +133,13 @@
             <p class="paper-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             <div class="paper-content">
                 <a class="paper-link" href="#">
-                    <img width="30" src="images/cat.png" />
+                    <img src=Images/cat2.png width="30" />
                 </a>
-                <p class="paper-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p>
+                <p class="paper-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
         </div>
-        <!-- paper div 태그 계속 복사/ 붙여넣기 -->
-       
+
+        <!-- 카드형식 이미지보드 -->
         <div class="paper">
             <div class="paper-holder">
                 <a>
@@ -154,9 +149,9 @@
             <p class="paper-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             <div class="paper-content">
                 <a class="paper-link" href="#">
-                    <img width="30" src="images/cat.png" />
+                    <img src=Images/cat2.png width="30" />
                 </a>
-                <p class="paper-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p>
+                <p class="paper-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
         </div>
 
@@ -169,24 +164,84 @@
             <p class="paper-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             <div class="paper-content">
                 <a class="paper-link" href="#">
-                    <img width="30" src="images/cat.png" />
+                    <img src=Images/cat2.png width="30" />
                 </a>
-                <p class="paper-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p>
+                <p class="paper-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
         </div>
 
         <div class="paper">
             <div class="paper-holder">
                 <a>
-                    <img width="190" src="https://placeimg.com/400/800/any" />
+                    <img width="190" src="https://placeimg.com/600/550/any" />
                 </a>
             </div>
             <p class="paper-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             <div class="paper-content">
                 <a class="paper-link" href="#">
-                    <img width="30" src="images/cat.png" />
+                    <img src=Images/cat2.png width="30" />
                 </a>
-                <p class="paper-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p>
+                <p class="paper-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </div>
+
+        <div class="paper">
+            <div class="paper-holder">
+                <a>
+                    <img width="190" src="https://placeimg.com/250/550/any" />
+                </a>
+            </div>
+            <p class="paper-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <div class="paper-content">
+                <a class="paper-link" href="#">
+                    <img src=Images/cat2.png width="30" />
+                </a>
+                <p class="paper-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </div>
+
+        <div class="paper">
+            <div class="paper-holder">
+                <a>
+                    <img width="190" src="https://placeimg.com/200/400/any" />
+                </a>
+            </div>
+            <p class="paper-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <div class="paper-content">
+                <a class="paper-link" href="#">
+                    <img src=Images/cat2.png width="30" />
+                </a>
+                <p class="paper-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </div>
+
+        <div class="paper">
+            <div class="paper-holder">
+                <a>
+                    <img width="190" src="https://placeimg.com/3000/2000/any" />
+                </a>
+            </div>
+            <p class="paper-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <div class="paper-content">
+                <a class="paper-link" href="#">
+                    <img src=Images/cat2.png width="30" />
+                </a>
+                <p class="paper-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </div>
+
+        <div class="paper">
+            <div class="paper-holder">
+                <a>
+                    <img width="190" src="https://placeimg.com/400/350/any" />
+                </a>
+            </div>
+            <p class="paper-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <div class="paper-content">
+                <a class="paper-link" href="#">
+                    <img src=Images/cat2.png width="30" />
+                </a>
+                <p class="paper-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
         </div>
 
@@ -199,9 +254,24 @@
             <p class="paper-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             <div class="paper-content">
                 <a class="paper-link" href="#">
-                    <img width="30" src="images/cat.png" />
+                    <img src=Images/cat2.png width="30" />
                 </a>
-                <p class="paper-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p>
+                <p class="paper-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </div>
+
+        <div class="paper">
+            <div class="paper-holder">
+                <a>
+                    <img width="190" src="https://placeimg.com/600/400/any" />
+                </a>
+            </div>
+            <p class="paper-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <div class="paper-content">
+                <a class="paper-link" href="#">
+                    <img src=Images/cat2.png width="30" />
+                </a>
+                <p class="paper-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
         </div>
 
@@ -214,9 +284,9 @@
             <p class="paper-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             <div class="paper-content">
                 <a class="paper-link" href="#">
-                    <img width="30" src="images/cat.png" />
+                    <img src=Images/cat2.png width="30" />
                 </a>
-                <p class="paper-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p>
+                <p class="paper-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
         </div>
 
@@ -229,14 +299,42 @@
             <p class="paper-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             <div class="paper-content">
                 <a class="paper-link" href="#">
-                    <img width="30" src="images/cat.png" />
+                    <img src=Images/cat2.png width="30" />
                 </a>
-                <p class="paper-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p>
+                <p class="paper-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
         </div>
 
+        <div class="paper">
+            <div class="paper-holder">
+                <a>
+                    <img width="190" src="https://placeimg.com/600/750/any" />
+                </a>
+            </div>
+            <p class="paper-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <div class="paper-content">
+                <a class="paper-link" href="#">
+                    <img src=Images/cat2.png width="30" />
+                </a>
+                <p class="paper-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </div>
+
+        <div class="paper">
+            <div class="paper-holder">
+                <a>
+                    <img width="190" src="https://placeimg.com/600/750/any" />
+                </a>
+            </div>
+            <p class="paper-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <div class="paper-content">
+                <a class="paper-link" href="#">
+                    <img src=Images/cat2.png width="30" />
+                </a>
+                <p class="paper-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </div>
     </div>
-
 
     <!-- 컨텐츠영역 종료 -->
     <!-- 라이트박스영역 시작 -->
@@ -244,16 +342,16 @@
         <div id="lightbox">
             <div class="user-information">
                 <a class="user-information-image" href="#">
-                    <img width="70" src="images/cat.png" />
+                    <img width="70" src="Images/cat2.png" />
                 </a>
                 <div class="user-information-text">
                     <h3>User</h3>
-                    <p>Lorem ipsum dolor sit amet.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 </div>
             </div>
             <hr class="lightbox-splitter" />
-            <!--<img width="600" src="https://via.placeholder.com/600x750" />-->
-            <img id="random-image" src="https://placeimg.com/600/750/any" width="600"/>
+            <!--<img src="https://via.placeholder.com/600x750" />-->
+            <img id="random-image" src="https://placeimg.com/600/750/any" width="600" />
         </div>
     </div>
     <!-- 라이트박스영역 종료 -->
