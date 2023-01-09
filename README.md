@@ -32,6 +32,16 @@ ASP.NET Core 학습 리포지토리
  ![라이프박스화면](https://raw.githubusercontent.com/Suhwankim2/studyASPNET/main/images/stml_screen02.png)
  
  ## 5일차
- ASP.NET Core
+  1. ASP.NET Core
+   - 기본개요
+   - 기본프로젝트
+   - 게시판 만들기 프로젝트 생성
+   
   
-  
+ ## 6일차
+ 1. ASP.NET Core
+	- 게시판 만들기 시작
+	- 게시판 리스트
+	- 게시판 CRUD 완료
+	- trumbowyg 데이터 추가
+	- Bootstrap 적용
