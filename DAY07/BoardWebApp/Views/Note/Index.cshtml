@@ -80,11 +80,11 @@
 				@if (startPage > 1)
 				{
 					<a href="?page=1" class="btn">[첫페이지]</a>
-
 				}
+
 				@if (page > 1)
 				{
-					<a href="?page=@(page-1)" class="btn">[이전 페이지]</a>
+					<a href="?page=@(page-1)" class="btn">[이전페이지]</a>
 				}
 				@for (int icount = startPage; icount <= endPage; icount++)
 				{

@@ -2,6 +2,7 @@
 using BoardWebApp.Models;
 using BoardWebApp.data;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Data.SqlClient;
 
 namespace BoardWebApp.Controllers
 {
@@ -39,6 +40,14 @@ namespace BoardWebApp.Controllers
             ViewBag.EndPage = endPage;
             ViewBag.Page = page;
             ViewBag.TotalPage = totalPage;
+
+		
+
+            var list =_context.Notes.FromSqlRaw($"SELECT dbo.USP_PagingNotes @StartCount={startCount},@EndCount ={endCount}").ToList();
+
+
+
+
 
 
             //ViwData는 백엔드/프론트엔 어디서든지 슬 수 있음			
