@@ -1,0 +1,110 @@
+﻿@* 주석 쓸모 없다
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+@**@
+@model IEnumerable<BoardWebApp.Models.Note>
+@{
+	//ViewData["Title"] = "게시판";
+
+	var startPage = ViewBag.StartPage;
+	var endPage = ViewBag.EndPage;
+	var page = ViewBag.Page;
+	var totalPage = ViewBag.TotalPage;
+
+
+}
+
+<partial name="_Notification" />
+
+
+
+
+
+<div class="container">
+	<div class="row pt-4">
+		<div class="col-10">
+			<h1 class="text-primary">게시판리스트</h1>
+		</div>
+		<div class="col text-end">
+			<a asp-controller="Note" asp-action="Create" class="btn btn-primary">
+				<i class="bi bi-file-earmark-plus">
+
+				</i>글생성
+			</a>
+		</div>
+	</div>
+</div>
+
+<div class="row pt-4"></div>
+<div class="container">
+	<div class="row">
+		<div class="col">
+			<div class="table-responsive">
+				<table class="table table-striped">
+					<thead>
+						<tr>
+							<th>@Html.DisplayNameFor(model => model.UserId)   </th>
+							<th>@Html.DisplayNameFor(model => model.Name)     </th>
+							<th>@Html.DisplayNameFor(model => model.Title)    </th>
+							<th>@Html.DisplayNameFor(model => model.ReadCount)</th>
+							<th>@Html.DisplayNameFor(model => model.PostDate) </th>
+							<th></th>
+						</tr>
+					</thead>
+					<tbody>
+						@foreach (var item in Model)
+						{
+							<tr>
+								<td>@Html.DisplayFor(modelItem => item.UserId)</td>
+								<td>@Html.DisplayFor(modelItem => item.Name)</td>
+								<td>
+									<a asp-controller="Note" asp-action="Detail" class="text-decoration-none text-dark" asp-route-id="@item.Id">
+										@Html.DisplayFor(modelItem => item.Title)
+									</a>
+								</td>
+								<td>@Html.DisplayFor(modelItem => item.ReadCount)</td>
+								<td>@Html.DisplayFor(modelItem => item.PostDate)</td>
+								<td>
+									<a asp-controller="Note" asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger"><i class="bi bi-trash3"></i>삭제</a>
+								</td>
+							</tr>
+						}
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				@if (startPage > 1)
+				{
+					<a href="?page=1" class="btn">[첫페이지]</a>
+
+				}
+				@if (page > 1)
+				{
+					<a href="?page=@(page-1)" class="btn">[이전 페이지]</a>
+				}
+				@for (int icount = startPage; icount <= endPage; icount++)
+				{
+					if (icount == page)
+					{
+						<a href="?page=@icount" class="btn" style="color:red;">@icount</a>
+					}
+					else
+					{
+						<a href="?page=@icount" class="btn">@icount</a>
+					}
+				}
+				@if (page < totalPage)
+				{
+					<a href="?page=@(page+1)" class="btn">[다음 페이지]</a>
+				}
+				@if (endPage < totalPage)
+				{
+					<a href="?page=@totalPage" class="btn">[마지막 페이지]</a>
+				}
+			</div>
+		</div>
+	</div>

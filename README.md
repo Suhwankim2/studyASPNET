@@ -45,3 +45,16 @@ ASP.NET Core 학습 리포지토리
 	- 게시판 CRUD 완료
 	- trumbowyg 데이터 추가
 	- Bootstrap 적용
+
+ ## 7일차
+ 1.  ASP.NET Core
+    - 게시판 추가기능
+    - 페이징 기능
+    - 게시판 완성
+  2. 결과화면
+
+ ## 8일차
+ 1.  ASP.NET Core
+     - 회원가입
+     - 로그인
+     - 세션관리
