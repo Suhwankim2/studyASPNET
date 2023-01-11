@@ -60,5 +60,5 @@ ASP.NET Core 학습 리포지토리
      - 세션관리
  2. 결과화면
  
- ![회원가입 화면](C:\DEV-SOURCE\studyASPNET\Day08\BoardWedApp\Views\회원가입 화면.png)
+ ![회원가입 화면](https://github.com/Suhwankim2/studyASPNET/blob/main/images/%ED%9A%8C%EC%9B%90%EA%B0%80%EC%9E%85%20%ED%99%94%EB%A9%B4.png)
  회원가입 화면
