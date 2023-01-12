@@ -63,7 +63,7 @@ ASP.NET Core 학습 리포지토리
  ![회원가입 화면](https://github.com/Suhwankim2/studyASPNET/blob/main/images/%ED%9A%8C%EC%9B%90%EA%B0%80%EC%9E%85%20%ED%99%94%EB%A9%B4.png)
  회원가입 화면
  
- ![템플릿자료 화면](https://github.com/Suhwankim2/studyASPNET/blob/main/images/4.png)
+ ![템플릿자료 화면](https://github.com/Suhwankim2/studyASPNET/blob/main/images/%ED%9A%8C%EC%9B%90%EA%B0%80%EC%9E%85%ED%99%94%EB%A9%B4.png)
  템플릿 자료 화면
  
  ## 9일차
