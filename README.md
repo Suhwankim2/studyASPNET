@@ -66,4 +66,18 @@ ASP.NET Core 학습 리포지토리
  ![템플릿자료 화면](https://github.com/Suhwankim2/studyASPNET/blob/main/images/%ED%85%9C%ED%94%8C%EB%A6%BF%ED%99%94%EB%A9%B4.png)
  템플릿 자료 화면
  
- ## 9일차
+## 9일차
+1. ASP.NET Core
+   - Bootstrap 템플릿 적용 1차 완료
+   - 권한관리
+   - 다른 템플릿 적용
+   - 기타 기능
+   -[stackoverflow](https://stackoverflow.com/)
+   
+2. 개발화면
+
+## 10일차
+1. ASP.NET Core
+   - 마무리
+   
+2. 개발화면
