@@ -69,10 +69,11 @@ ASP.NET Core 학습 리포지토리
 ## 9일차
 1. ASP.NET Core
    - Bootstrap 템플릿 적용 1차 완료
-   - 권한관리
+   - 로그인 계정으로 글쓰기
+   - 메인페이지 DB연동
    - 다른 템플릿 적용
-   - 기타 기능
-   -[stackoverflow](https://stackoverflow.com/)
+ 
+   
    
 2. 개발화면
 

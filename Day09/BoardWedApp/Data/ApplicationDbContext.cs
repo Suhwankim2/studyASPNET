@@ -23,6 +23,9 @@ namespace BoardWedApp.Data
 		public DbSet<Note> Notes { get; set; }
 
 
-		public DbSet<BoardWedApp.Models.RegisterModel> RegisterModel { get; set; }
+		public DbSet<RegisterModel> RegisterModel { get; set; }
+
+        public DbSet<profile> Profiles { get; set; }
+
     }
 }
