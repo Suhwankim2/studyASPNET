@@ -29,7 +29,7 @@ ASP.NET Core 학습 리포지토리
  
 ![메인화면](https://raw.githubusercontent.com/Suhwankim2/studyASPNET/main/images/stml_screen01.png)
  메인화면
- ![라이프박스화면](https://github.com/Suhwankim2/studyASPNET/blob/main/images/%ED%9A%8C%EC%9B%90%EA%B0%80%EC%9E%85%ED%99%94%EB%A9%B4.png)
+ ![라이프박스화면](https://github.com/Suhwankim2/studyASPNET/blob/main/images/stml_screen02.png)
  
  ## 5일차
   1. ASP.NET Core
