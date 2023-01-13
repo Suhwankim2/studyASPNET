@@ -85,7 +85,8 @@ ASP.NET Core 학습 리포지토리
 1. ASP.NET Core
    - 메인페이지 DB(연동) 관리자
    - 권한관리
-   - 
+   - 전체 마무리
+   -최종 소스(https://github.com/Suhwankim2/studyASPNET/tree/main/Day10/BoardWedApp)
    
 2. 개발화면
 ![권한관리화면](https://raw.githubusercontent.com/Suhwankim2/studyASPNET/main/images/stml_screen01.png)
