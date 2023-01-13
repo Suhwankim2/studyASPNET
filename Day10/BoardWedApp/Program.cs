@@ -37,6 +37,20 @@ namespace BoardWedApp
                 }
                 );
 
+            // 권한 설정 
+            builder.Services.AddAuthorization(Options =>
+            {
+                Options.AddPolicy("AdminRolePolicy", policy => policy.RequireRole("Admin"));
+            });
+
+            builder.Services.AddAuthorization(Options =>
+            {
+                Options.AddPolicy("EditRolePolicy", policy => policy.RequireClaim("Edit Role"));
+                Options.AddPolicy("DeleteRolePolicy", policy => policy.RequireClaim("Delete Role"));
+            });
+
+
+
 
 			var app = builder.Build();
 

@@ -71,14 +71,22 @@ ASP.NET Core 학습 리포지토리
    - Bootstrap 템플릿 적용 1차 완료
    - 로그인 계정으로 글쓰기
    - 메인페이지 DB연동
-   - 다른 템플릿 적용
  
+ ![DB 연동 메인화면](https://raw.githubusercontent.com/Suhwankim2/studyASPNET/main/images/stml_screen01.png)
+ DB 연동 메인화면
    
    
 2. 개발화면
+  
+
+
 
 ## 10일차
 1. ASP.NET Core
-   - 마무리
+   - 메인페이지 DB(연동) 관리자
+   - 권한관리
+   - 
    
 2. 개발화면
+![권한관리화면](https://raw.githubusercontent.com/Suhwankim2/studyASPNET/main/images/stml_screen01.png)
+ 권한관리화면

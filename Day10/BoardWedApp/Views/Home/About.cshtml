@@ -1,0 +1,52 @@
+﻿@model IEnumerable<BoardWedApp.Models.profile>
+
+@{
+    ViewData["Title"] = "About";
+}
+
+
+<div class="container">
+    <div class="row pt-4">
+        <div class="col-10">
+            <h2 class="text-primary">넥슨 소개</h2>
+        </div>        
+    </div>
+    <div class="pt-4"></div>
+</div>
+<!--card1 영역-->
+<div class="row gx-4 gx-lg-5 align-items-center my-5">
+    <div class="col-lg-7">
+        <img class="img-fluid rounded mb-4 mb-lg-0" src="/Uploads/@Model.FirstOrDefault(x => x.Division == "Card1").FileName" width="800" alt="..." />
+    </div>
+    <div class="col-lg-5">
+        <h1 class="font-weight-light">@Model.FirstOrDefault(x => x.Division == "Card1").Title" </h1>
+        <p>@Html.Raw(@Model.FirstOrDefault(x => x.Division == "Card1").Description )</p>
+        <a class="btn btn-primary btn-sm" href="https://bf.nexon.com/Main/Index" ).FileName" ).Url" target="_blank">Reference</a>
+    </div>
+</div>
+
+<!--card2 영역-->
+<div class="row gx-4 gx-lg-5 align-items-center my-5">
+    
+    <div class="col-lg-5">
+        <h1 class="font-weight-light">@Model.FirstOrDefault(x => x.Division == "Card2").Title" </h1>
+        <p>@Html.Raw(@Model.FirstOrDefault(x => x.Division == "Card2").Description )</p>
+        <a class="btn btn-primary btn-sm" href="https://kart.nexon.com/events/2023/0112/Event.aspx).Url" target="_blank">Reference</a>
+    </div>
+    <div class="col-lg-7">
+        <img class="img-fluid rounded mb-4 mb-lg-0" src="/Uploads/@Model.FirstOrDefault(x => x.Division == "Card2").FileName" width="800" alt="..." />
+    </div>
+</div>
+
+
+<!--card3 영역-->
+<div class="row gx-4 gx-lg-5 align-items-center my-5">
+    <div class="col-lg-7">
+        <img class="img-fluid rounded mb-4 mb-lg-0" src="/Uploads/@Model.FirstOrDefault(x => x.Division == "Card3").FileName" width="800" alt="..." />
+    </div>
+    <div class="col-lg-5">
+        <h1 class="font-weight-light">@Model.FirstOrDefault(x => x.Division == "Card3").Title" </h1>
+        <p>@Html.Raw(@Model.FirstOrDefault(x => x.Division == "Card3").Description )</p>
+        <a class="btn btn-primary btn-sm" href="https://ca.nexon.com/Event_20221229" ).Url" target="_blank">Reference</a>
+    </div>
+</div>
