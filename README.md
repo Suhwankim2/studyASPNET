@@ -72,7 +72,7 @@ ASP.NET Core 학습 리포지토리
    - 로그인 계정으로 글쓰기
    - 메인페이지 DB연동
  
- ![DB 연동 메인화면](https://raw.githubusercontent.com/Suhwankim2/studyASPNET/main/images/stml_screen01.png)
+ ![DB 연동 메인화면](https://github.com/Suhwankim2/studyASPNET/blob/main/images/DB%EC%97%B0%EB%8F%99%ED%99%94%EB%A9%B4.png)
  DB 연동 메인화면
    
    
