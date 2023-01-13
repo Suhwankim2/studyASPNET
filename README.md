@@ -89,5 +89,5 @@ ASP.NET Core 학습 리포지토리
    -최종 소스(https://github.com/Suhwankim2/studyASPNET/tree/main/Day10/BoardWedApp)
    
 2. 개발화면
-![권한관리화면](https://raw.githubusercontent.com/Suhwankim2/studyASPNET/main/images/stml_screen01.png)
+![권한관리화면](https://github.com/Suhwankim2/studyASPNET/blob/main/images/%EA%B6%8C%ED%95%9C%EA%B4%80%EB%A6%AC%ED%99%94%EB%A9%B4.png)
  권한관리화면
