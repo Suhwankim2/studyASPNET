@@ -5,7 +5,7 @@
 
 }
 
-<h1>User Registeration</h1>
+<h1>사용자 등록</h1>
 
 <div clss= "container>"
 <div class="row">
@@ -17,8 +17,8 @@
                 <input asp-for="RoleName" class="form-control" />
                 <span asp-validation-for="RoleName" class="text-danger"></span>
             </div>
-            <button type="submit" class="btn btn-primary">롤생성</button>
-            <a asp-action="ListRoles"asp-controller="Admin" class="btn btn-secondary btn-sm">Back to List</a>
+            <button type="submit" class="btn btn-primary btn-sm">롤생성</button>
+            <a asp-action="ListRoles"asp-controller="Admin" class="btn btn-secondary btn-sm">뒤로가기</a>
         </form>
     </div>
 </div>

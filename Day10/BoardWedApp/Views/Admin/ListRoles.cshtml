@@ -5,16 +5,16 @@
 @inject IAuthorizationService IAuthorizationService
 
 @{
-    ViewData["Title"] = "All Roles";
+    ViewData["Title"] = "모든 롤";
 }
 
-<h1>All Roles</h1>
+<h1>롤 리스트</h1>
 
 @if (Model.Any())
 {
 
-    <a class="btn btn-primary  btn-sm mb-3" style="width:auto"
-   asp-controller="admin" asp-action="CreateRole">
+    <a class="btn btn-outline-dark btn-sm mb-3" style="width:auto"
+   asp-controller="Admin" asp-action="CreateRole">
         롤 추가
     </a>
 
@@ -34,12 +34,12 @@
                 <form method="post" asp-action="DeleteRole" asp-route-id="@role.Id">
                    @* @if ((await IAuthorizationService.AuthorizeAsync(User, "EditRolePolicy")).Succeeded)
                     {*@
-                        <a class="btn btn-primary btn-sm" asp-action="EditRole"
+                        <a class="btn btn-outline-info btn-sm" asp-action="EditRole"
                asp-controller="Admin" asp-route-id="@role.Id">
                             롤수정
                         </a>
                     @*}*@
-                    <button type="submit" class="btn btn-danger">삭제</button>
+                    <button type="submit" class="btn btn-outline-info btn-sm">삭제</button>
                 </form>
             </div>
         </div>
