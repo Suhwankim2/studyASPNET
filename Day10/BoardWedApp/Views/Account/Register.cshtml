@@ -1,66 +1,80 @@
 ﻿@model BoardWedApp.Models.RegisterModel
 
 @{
-    ViewData["Title"] = "Register";
+	ViewData["Title"] = "Register";
 }
 
-<h1>Register</h1>
+<h1>등록</h1>
 <div class="mb-2"></div>
 <div class="py-5 text-center ">
-    <img class="d-block mx-auto mb-4" src="https://getbootstrap.com/docs/4.1/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
-        <h2>회원가입</h2>
-     <p class="lead">안녕하세요! 처음 뵙겠습니다. 이 사이트는 회원가입 후 이용이 가능합니다.</p>
-      </div>
+	<h1 class="logo">
+		<a href="https://www.nexon.com/Home/Game" data-a2s="click" data-object="P_LOGIN" data-option="{&quot;Name&quot;:&quot;Logo&quot;}"><span class="control-label ">NEXON</span></a>
+	</h1>
+	<h2>회원가입</h2>
+	<p class="lead">안녕하세요! 처음 뵙겠습니다. 이 사이트는 회원가입 후 이용이 가능합니다.</p>
+</div>
+
+<hr style="margin-bottom:30px; border:0px; height:1px; background: linear-gradient(to left, transparent, rgba(255,0,0,1), transparent);">
+<hr style="margin-bottom:30px; width:700px; border:0px; height:1px; background: linear-gradient(to left, transparent, rgba(205,0,0,1), transparent);">
+<hr style="margin-bottom:30px; width:500px; border:0px; height:1px; background: linear-gradient(to left, transparent, rgba(215,0,0,1), transparent);">
+<hr style="margin-bottom:30px; width:300px; border:0px; height:1px; background: linear-gradient(to left, transparent, rgba(243,0,0,1), transparent);">
+<hr style="margin-bottom:30px; width:100px; border:0px; height:1px; background: linear-gradient(to left, transparent, rgba(220,0,0,1), transparent);">
 
 
 
+<h4 class="text-start">회원정보</h4>
+<form asp-action="Register ">
+	<div asp-validation-summary="ModelOnly" class="text-black-50"></div>
 
 
-<h4 class="mb-3 text-center">회원정보</h4>
-            <form asp-action="Register ">
-                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-               
+	<div class="mb-3">
+		<label asp-for="UserName" class="control-label"></label>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<input asp-for="UserName" class="col-form-label" placeholder="아이디 입력" />
 
-            <div class="mb-3">
-        <label asp-for="UserName" class="control-label"></label>
-        <input asp-for="UserName" class="form-control" placeholder="아이디 입력"  />
-        <span asp-validation-for="UserName" class="text-danger"></span>
-            </div>
-            <div class="mb-3">
-                <label asp-for="Email" class="control-label"></label>
-                <input asp-for="Email" class="form-control" />
-                <span asp-validation-for="Email" class="text-danger"></span>
-            </div>
-            <div class="mb-3">
-                <label asp-for="Password" class="control-label"></label>
-                <input asp-for="Password" class="form-control" />
-                <span asp-validation-for="Password" class="text-danger"></span>
-            </div>
-            <div class="mb-3">
-                    <label asp-for="ConfirmPassword" class="control-label"></label>
-                    <input asp-for="ConfirmPassword" class="form-control" />
-                    <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
-                </div>
-                <div class="mb-3">
-                    <label asp-for="PhoneNumber" class="control-label"></label>
-                    <span class="text-muted">(옵션)</span>
-                    <input asp-for="PhoneNumber" class="form-control" placeholder="010-1234-5678" />
-                </div>
-                <div class="mb-3">
-                    <button type="submit" value="Create" class="btn btn-primary">
-                        <span class="bi bi-person-add"></span>회원가입
-                    </button>
-                    <a asp-controller="Home" asp-action="Index" class="btn btn-warning">
-                        <i class="bi bi-x-circle-fill"></i>
-                         취소
-                        </a>
-                </div>
-            </form>
-        </div>
-    </div>
+		<span asp-validation-for="UserName" class="text-danger"></span>
+	</div>
+	<div class="mb-3">
+		<label asp-for="Email" class="control-label"></label>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<input asp-for="Email" class="col-form-label" />
+		<span asp-validation-for="Email" class="text-danger"></span>
+	</div>
+	<div class="mb-3">
+		<label asp-for="Password" class="control-label"></label>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<input asp-for="Password" class="col-form-label" />
+		<span asp-validation-for="Password" class="text-danger"></span>
+	</div>
+	<div class="mb-3">
+		<label asp-for="ConfirmPassword" class="control-label"></label>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<input asp-for="ConfirmPassword" class="col-form-label" placeholder="패스워드와 똑같이 입력" />
+		<span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+	</div>
+	<div class="mb-3">
+		<label asp-for="PhoneNumber" class="control-label"></label>
+		&nbsp;&nbsp;
+		<span class="text-muted">(옵션)</span>
+		<input asp-for="PhoneNumber" class="col-form-label" placeholder="010-1234-5678" />
+	</div>
+	<div class="mb-3">
+		<button type="submit" value="Create" class="btn btn-primary">
+			<span class="bi bi-person-add"></span>회원가입
+		</button>
+		<a asp-controller="Home" asp-action="Index" class="btn btn-warning">
+			<i class="bi bi-x-circle-fill"></i>
+			취소
+		</a>
+	</div>
+</form>
+		</div>
+	</div>
 </div>
 
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+	@{
+		await Html.RenderPartialAsync("_ValidationScriptsPartial");
+	}
 }
